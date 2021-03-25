@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ProjetMobile</string>
+    <string name="fleshgauche"><![CDATA[<<]]></string>
+    <string name="fleshdroite"><![CDATA[>>]]></string>
+    <string name="deconnexion">Déconnexion </string>
+    <string name="budget">Budget</string>
+    <string name="EDT">EDT</string>
+    <string name="VDC">VDC</string>
+    <string name="logo">logo</string>
+    <string name="Connec_Id">Identifiant</string>
+    <string name="Connec_MDP">Mot de passe</string>
+    <string name="numero">Numéro : 06 10 11 12 13</string>
+    <string name="mail">Mail : EcolePrivé@gmail.com</string>
+    <string name="adresse">Adresse : 42 rue des canards, 59000 Lille</string>
+    <string name="messageDirect">Envoyer un message direct : </string>
+    <string name="valider">Valider</string>
+    <string name="votremail">Votre eMail : </string>
+    <string name="description">Description</string>
+    <string name="actualite">Actualité</string>
+    <string name="first">En ce jour ,1er Mai 2021, Fete du travail, restez chez vous et ne faite rien.</string>
+    <string name="second">Cette semaine venez tous en pyjama pour faire une sieste en classe afin de pouvoir évaluer votre sommeil et votre capacité a pouvoir dormir partout.</string>
+    <string name="third">Vendredi 27 Mai, compétition de beach volley, il ne peut y avoir que 50 inscription donc dépéchez-vous afin de pouvoir gagner un Iphone 10 pour tout les vainqueurs !!</string>
+    <string name="textdescrption">NDG est un établissement catholique, forte expérience de plus de 150 années passées au service des jeunes de Sambre Avesnois. Résolument tournés vers un avenir, notre volonté est de continuer à relever les défis éducatifs de notre temps. En se référant à un esprit qui animait nos fondateurs, nous proposons un projet pédagogique et éducatif de la maternelle à notre enseignement supérieur.</string>
+    <string name="connexion">Connexion</string>
+    <string name="contact">Contact</string>
+    <string name="title_activity_budget">Budget</string>
+</resources>
