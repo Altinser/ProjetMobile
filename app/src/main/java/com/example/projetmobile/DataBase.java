@@ -19,6 +19,7 @@ public class DataBase extends SQLiteOpenHelper {
     public static final String TABLE_NAME4 = "budget";
     public static final String TABLE_NAME5 = "utilisateur";
     public static final String ID = "ID";
+    public static final String Etat = "Etat";
     public static final String Date = "Date";
     public static final String Admin = "Admin";
     public static final String COL_2 = "Text";
@@ -63,8 +64,8 @@ public class DataBase extends SQLiteOpenHelper {
 
         //budget
         db.execSQL( "create table " + TABLE_NAME4 + LBR + ID + " INTEGER PRIMARY KEY AUTOINCREMENT" + COM +
-                Info + " TEXT" + COM + Montant + " TEXT"+RBR );
-        /* db.execSQL( "create table budget (ID INTEGER PRIMARY KEY AUTOINCREMENT, Info TEXT, Montant TEXT)" );*/
+                Info + " TEXT" + COM + Montant + " TEXT"+COM+Etat+" TEXT"+RBR );
+        /* db.execSQL( "create table budget (ID INTEGER PRIMARY KEY AUTOINCREMENT, Info TEXT, Montant TEXT, Etat TEXT )" );*/
 
         db.execSQL( "create table " + TABLE_NAME5 + LBR + ID + " INTEGER PRIMARY KEY AUTOINCREMENT" + COM +
                 Identifiant + " TEXT" + COM + Password + " TEXT" +COM+Admin+" TEXT"+RBR );
@@ -105,6 +106,11 @@ public class DataBase extends SQLiteOpenHelper {
         instertDataVdc("Anglais : Apprendre le vocabulaire page 140","Anglais : 12/20");
         instertDataVdc("Mathématique : Rendre le devoire maison pour le 30/04","Mathématique : 18/20");
         instertDataVdc("Géographie : Apprendre la totalité des pays pour le 30/04","Géographie : 18/20");
+
+        instertDataBudget("Cantine mars","175€","en attente");
+        instertDataBudget("Sortie scolaire","50€","payée");
+        instertDataBudget("Cantine février","175€","en attente");
+        instertDataBudget("Abonnement bus annuel","335.99€","payée");
     }
 
     //Insert data in database
@@ -131,11 +137,12 @@ public class DataBase extends SQLiteOpenHelper {
         contentValues.put( Note, note );
         db.insert( TABLE_NAME3, null, contentValues );
     }
-    public void instertDataBudget(String info, String montant){
+    public void instertDataBudget(String info, String montant, String etat){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put( Info, info );
         contentValues.put( Montant, montant );
+        contentValues.put( Etat, etat);
         db.insert( TABLE_NAME4, null, contentValues );
     }
     public void instertDataUtilisateur(String identifiant, String password, String admin){
