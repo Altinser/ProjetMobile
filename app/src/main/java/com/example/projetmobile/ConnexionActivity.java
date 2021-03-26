@@ -42,7 +42,9 @@ public class ConnexionActivity extends AppCompatActivity {
             for(Utilisateur u: listUtilisateur){
                 if(u.getNom().equals(identifiant.getText().toString()) && u.getMdp().equals(mdp.getText().toString())){
                     if(u.getAdmin().equals("oui")){
-
+                        Intent i = new Intent(getApplicationContext(), ActivityAdminActualiter.class);
+                        startActivity(i);
+                        finish();
                     }else{
                         Intent i = new Intent(getApplicationContext(), AccueilCoActivity.class);
                         startActivity(i);

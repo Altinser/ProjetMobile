@@ -4,34 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.projetmobile.BudgetActivity">
+    tools:context=".ActivityAdminActualiter">
 
     <Button
-        android:id="@+id/edt"
-        android:layout_width="57dp"
+        android:id="@+id/AdminEDT"
+        android:layout_width="147dp"
         android:layout_height="48dp"
         android:backgroundTint="#3F6185"
-        android:text="EDT"
+        android:text="Emploi du temps"
         android:textSize="12dp"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092" />
 
     <Button
-        android:id="@+id/vdc"
+        android:id="@+id/AdminActualiter"
         android:layout_width="140dp"
         android:layout_height="48dp"
         android:backgroundTint="#3F6185"
-        android:text="Vie de classe"
+        android:text="Actualiter"
         android:textSize="12dp"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092" />
@@ -49,22 +49,7 @@
         app:srcCompat="@drawable/logo_travail_et_partage" />
 
     <Button
-        android:id="@+id/accueil"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:backgroundTint="#3F6185"
-        android:text="Accueil"
-        android:textSize="12dp"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
-
-    <Button
-        android:id="@+id/deconnexion"
+        android:id="@+id/AdminDeconnexion"
         android:layout_width="130dp"
         android:layout_height="48dp"
         android:backgroundTint="#3F6185"
@@ -79,50 +64,62 @@
         app:layout_constraintVertical_bias="0.092" />
 
     <ListView
-        android:id="@+id/myLV"
-        android:layout_width="wrap_content"
-        android:layout_height="480dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:id="@+id/listviewAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider7"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="275dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="112dp"
-        android:text="Mes transactions :"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnadd"
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="16dp"
-        android:text="Ajouter"
+        android:layout_marginBottom="280dp"
+        android:text="Derniere Actualiter :"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AdminTextFieldActualiter"
+        app:layout_constraintVertical_bias="0.706" />
+
+    <EditText
+        android:id="@+id/AdminTextFieldActualiter"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AdminEDT"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <Button
+        android:id="@+id/AdminbtnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:backgroundTint="#3F6185"
+        android:text="Ajouter"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AdminTextFieldActualiter"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
-        android:id="@+id/divider7"
+        android:id="@+id/divider9"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="16dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintBottom_toTopOf="@+id/listviewAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:layout_editor_absoluteX="1dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

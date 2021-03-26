@@ -3,12 +3,14 @@ package com.example.projetmobile;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class addTransaction extends AppCompatActivity {
+
+public class ActivityAddTransaction extends AppCompatActivity {
 
     private EditText name, type, mont;
     String nom, typeTrans, montTrans;
@@ -37,13 +39,14 @@ public class addTransaction extends AppCompatActivity {
                 nom = name.getText().toString();
                 typeTrans = type.getText().toString();
                 montTrans = mont.getText().toString();
-                Intent retour = new Intent(getApplicationContext(), transac.class);
-                retour.putExtra("name", nom);
-                retour.putExtra("type", typeTrans);
-                retour.putExtra("mont", montTrans);
+                Intent retour = new Intent(getApplicationContext(), BudgetActivity.class);
+                DataBase myDB = new DataBase( this );
+                myDB.instertDataBudget(nom,montTrans,typeTrans);
                 startActivity(retour);
                 finish();
             }
         });
+
+
     }
 }

@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetMobile">
-        <activity android:name=".NoteCustomList"></activity>
-        <activity android:name=".DevoirCustomList" />
+        <activity android:name=".ActivityAdminEDT"></activity>
+        <activity android:name=".ActivityAdminActualiter" />
+        <activity android:name=".ActivityAddTransaction" />
+        <activity android:name=".BudgetCustomList" />
         <activity android:name=".BudgetActivity" />
+        <activity android:name=".NoteCustomList" />
+        <activity android:name=".DevoirCustomList" />
         <activity android:name=".VDCActivity" />
         <activity android:name=".ConnexionActivity" />
         <activity android:name=".ContactActivity" />

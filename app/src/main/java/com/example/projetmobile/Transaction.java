@@ -1,10 +1,10 @@
 package com.example.projetmobile;
 
-public class evenement {
+public class Transaction {
 
     private String nom, type, montant;
 
-    public evenement(String nom, String type, String montant){
+    public Transaction(String nom, String type, String montant){
         this.nom = nom;
         this.type = type;
         this.montant = montant;
