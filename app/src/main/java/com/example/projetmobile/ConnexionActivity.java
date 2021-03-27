@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -50,6 +51,8 @@ public class ConnexionActivity extends AppCompatActivity {
                         startActivity(i);
                         finish();
                     }
+                }else{
+                    Toast.makeText(this, "Champs invalide", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class AccueilActivity extends AppCompatActivity {
 
@@ -43,6 +45,7 @@ public class AccueilActivity extends AppCompatActivity {
             listActualiter.add(new Actualiter(res.getString(1)));
         }
 
+        Collections.reverse(listActualiter);
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(new CustomListActualiterAdapter(this, listActualiter));
 

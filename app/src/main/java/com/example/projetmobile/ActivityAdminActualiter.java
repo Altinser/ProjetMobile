@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ActivityAdminActualiter extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class ActivityAdminActualiter extends AppCompatActivity {
             listActualiter.add(new Actualiter(res.getString(1)));
         }
 
+        Collections.reverse(listActualiter);
         ListView listView = (ListView) findViewById(R.id.listviewAdmin);
         listView.setAdapter(new CustomListActualiterAdapter(this, listActualiter));
 
