@@ -26,7 +26,7 @@
         android:layout_width="140dp"
         android:layout_height="48dp"
         android:backgroundTint="#3F6185"
-        android:text="Actualiter"
+        android:text="Actualité"
         android:textSize="12dp"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
