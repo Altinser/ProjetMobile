@@ -71,7 +71,6 @@ public class DataBase extends SQLiteOpenHelper {
                 Identifiant + " TEXT" + COM + Password + " TEXT" +COM+Admin+" TEXT"+RBR );
         /* db.execSQL( "create table utilisateur (ID INTEGER PRIMARY KEY AUTOINCREMENT, Identifiant TEXT, Password TEXT, Admin TEXT)" );*/
 
-
     }
 
     @Override
@@ -91,11 +90,11 @@ public class DataBase extends SQLiteOpenHelper {
         instertDataActualiter("Cette semaine venez tous en pyjama pour faire une sieste en classe afin de pouvoir évaluer votre sommeil et votre capacité a pouvoir dormir partout.");
         instertDataActualiter("Vendredi 27 Mai, compétition de beach volley, il ne peut y avoir que 50 inscription donc dépéchez-vous afin de pouvoir gagner un Iphone 10 pour tout les vainqueurs !!");
 
-        instertDataUtilisateur("lucas","123","non");
+        instertDataUtilisateur("lucas","123","oui");
         instertDataUtilisateur("quentin","123","non");
         instertDataUtilisateur("maxime","123","non");
         instertDataUtilisateur("vivien","123","non");
-        instertDataUtilisateur("yoann","123","oui");
+        instertDataUtilisateur("yoann","123","non");
 
         instertDataCour("Mathématique","110","M.HAMZAOUI","8h00-9h30","2021:03:24");
         instertDataCour("Francais","101","M.JECPAS","11h00-12h30","2021:03:24");
@@ -120,6 +119,7 @@ public class DataBase extends SQLiteOpenHelper {
         contentValues.put( COL_2, info );
         db.insert( TABLE_NAME1, null, contentValues );
     }
+    //Insert data in database
     public void instertDataCour(String module,String salle,String profnom, String horraire, String date){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -156,35 +156,29 @@ public class DataBase extends SQLiteOpenHelper {
 
 
 
-    //Cursor class is used to move around in the database
     public Cursor getDataActualiter(){
         //Get the data from database
         SQLiteDatabase db = getWritableDatabase();
-        Cursor res = db.rawQuery( "select * from " + TABLE_NAME1, null );
-        return res;
+        return db.rawQuery( "select * from " + TABLE_NAME1, null );
     }
     public Cursor getDataCour(){
         //Get the data from database
         SQLiteDatabase db = getWritableDatabase();
-        Cursor res = db.rawQuery( "select * from " + TABLE_NAME2, null );
-        return res;
+        return db.rawQuery( "select * from " + TABLE_NAME2, null );
     }
     public Cursor getDataVDC(){
         //Get the data from database
         SQLiteDatabase db = getWritableDatabase();
-        Cursor res = db.rawQuery( "select * from " + TABLE_NAME3, null );
-        return res;
+        return db.rawQuery( "select * from " + TABLE_NAME3, null );
     }
     public Cursor getDataBudget(){
         //Get the data from database
         SQLiteDatabase db = getWritableDatabase();
-        Cursor res = db.rawQuery( "select * from " + TABLE_NAME4, null );
-        return res;
+        return db.rawQuery( "select * from " + TABLE_NAME4, null );
     }
     public Cursor getDataUtilisateur(){
         //Get the data from database
         SQLiteDatabase db = getWritableDatabase();
-        Cursor res = db.rawQuery( "select * from " + TABLE_NAME5, null );
-        return res;
+        return db.rawQuery( "select * from " + TABLE_NAME5, null );
     }
 }
