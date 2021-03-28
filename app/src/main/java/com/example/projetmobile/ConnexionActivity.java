@@ -40,20 +40,22 @@ public class ConnexionActivity extends AppCompatActivity {
         });
 
         btnValider.setOnClickListener(view -> {
-            for(Utilisateur u: listUtilisateur){
-                if(u.getNom().equals(identifiant.getText().toString()) && u.getMdp().equals(mdp.getText().toString())){
-                    if(u.getAdmin().equals("oui")){
-                        Intent i = new Intent(getApplicationContext(), ActivityAdminActualiter.class);
-                        startActivity(i);
-                        finish();
-                    }else{
-                        Intent i = new Intent(getApplicationContext(), AccueilCoActivity.class);
-                        startActivity(i);
-                        finish();
+            if(!identifiant.getText().toString().isEmpty() || !mdp.getText().toString().isEmpty()){
+                for(Utilisateur u: listUtilisateur){
+                    if(u.getNom().equals(identifiant.getText().toString()) && u.getMdp().equals(mdp.getText().toString())){
+                        if(u.getAdmin().equals("oui")){
+                            Intent i = new Intent(getApplicationContext(), ActivityAdminActualiter.class);
+                            startActivity(i);
+                            finish();
+                        }else{
+                            Intent i = new Intent(getApplicationContext(), AccueilCoActivity.class);
+                            startActivity(i);
+                            finish();
+                        }
                     }
-                }else{
-                    Toast.makeText(this, "Champs invalide", Toast.LENGTH_SHORT).show();
                 }
+            }else{
+                Toast.makeText(this, "Champs invalide", Toast.LENGTH_SHORT).show();
             }
         });
     }
