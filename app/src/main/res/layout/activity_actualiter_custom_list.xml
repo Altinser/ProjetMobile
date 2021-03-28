@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/Actu"
         android:layout_width="347dp"
-        android:layout_height="67dp"
+        android:layout_height="85dp"
         android:gravity="center|left"
         android:text="Actualiter"
         android:textColor="#6A6A6A"
